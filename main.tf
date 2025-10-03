@@ -14,23 +14,25 @@
 # }
 
 
+# Each user will also get an Access Key + Secret Key (if enabled in module).
+# Tags are applied for ownership and team tracking.
+# -------------------------------------------------------------------
+# module "iam_users" {
+#   source     = "./modules/security-identity-and-compliance/identity-and-access-management"
 
-module "iam_users" {
-  source     = "./modules/security-identity-and-compliance/identity-and-access-management"
+#   user_names = ["manish", "ajay", "ravi"]
 
-  user_names = ["manish", "ajay", "ravi"]
+#   policy_arns = [
+#     "arn:aws:iam::aws:policy/AmazonS3FullAccess",
+#     "arn:aws:iam::aws:policy/AmazonECS_FullAccess",
+#     "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"
+#   ]
 
-  policy_arns = [
-    "arn:aws:iam::aws:policy/AmazonS3FullAccess",
-    "arn:aws:iam::aws:policy/AmazonECS_FullAccess",
-    "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"
-  ]
-
-  tags = {
-    Owner = "CloudOps"
-    Team  = "DevOps"
-  }
-}
+#   tags = {
+#     Owner = "CloudOps"
+#     Team  = "DevOps"
+#   }
+# }
 
 
 
