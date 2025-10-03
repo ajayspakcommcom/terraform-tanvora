@@ -1,0 +1,14 @@
+terraform/
+│── main.tf         # Root file calling modules
+│── variables.tf    # Input variables
+│── outputs.tf      # Outputs
+│── provider.tf     # Provider config
+│── modules/
+│    ├── vpc/
+│    │    ├── main.tf
+│    │    ├── variables.tf
+│    │    └── outputs.tf
+│    ├── ec2/
+│    ├── s3/
+
+

@@ -1,0 +1,53 @@
+# --------------------------
+# Terraform related
+# --------------------------
+# Local .terraform directories
+.terraform/
+.terraform.lock.hcl
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+terraform.tfstate
+terraform.tfstate.backup
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Plan output files
+*.tfplan
+
+# Variable files (sensitive data like credentials)
+*.tfvars
+*.tfvars.json
+
+# Override files (local-only configs)
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore lock files if generated locally
+.terraform.lock.hcl
+
+# --------------------------
+# IDE / Editor related
+# --------------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+
+# Mac system files
+.DS_Store
+
+# Logs
+*.log
+
+# Node / npm related (in case notes or scripts include Node)
+node_modules/
+npm-debug.log
+yarn-error.log
