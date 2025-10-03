@@ -1,15 +1,37 @@
-provider "aws" {
-  region = "ap-south-1" # Change to your AWS region
-}
 
-resource "aws_s3_bucket" "demo" {
-  bucket = "my-first-terraform-bucket-ajay"
-  acl    = "private"
+# -------------------------------------------------------------------
+# Elastic IP Module
+# This module provisions an Elastic IP in AWS and applies tags.
+# The Elastic IP can later be associated with an EC2 instance or other resources.
+# -------------------------------------------------------------------
+# module "elastic_ip" {
+#   source   = "./modules/others/elastic-ip"
+#   eip_name = "my-elastic-ip"
+#   tags = {
+#     Environment = "Dev"
+#     Project     = "Demo"
+#   }
+# }
+
+
+
+module "iam_users" {
+  source     = "./modules/security-identity-and-compliance/identity-and-access-management"
+
+  user_names = ["manish", "ajay", "ravi"]
+
+  policy_arns = [
+    "arn:aws:iam::aws:policy/AmazonS3FullAccess",
+    "arn:aws:iam::aws:policy/AmazonECS_FullAccess",
+    "arn:aws:iam::aws:policy/AmazonEC2ContainerRegistryFullAccess"
+  ]
 
   tags = {
-    Name        = "MyFirstBucket"
-    Environment = "Dev"
+    Owner = "CloudOps"
+    Team  = "DevOps"
   }
 }
+
+
 
 
