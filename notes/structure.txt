@@ -10,5 +10,3 @@ terraform/
 │    │    └── outputs.tf
 │    ├── ec2/
 │    ├── s3/
-
-
