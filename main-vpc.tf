@@ -13,3 +13,15 @@ module "vpc" {
     Team  = "DevOps"
   }
 }
+
+# notes
+# What’s Typically Added Later (if needed)
+# What remains (MNC best practices):
+# 🔹 VPC Endpoints (S3, DynamoDB, ECR, Secrets Manager)
+# 🔹 Security Groups (for EC2, ALB, DB)
+# 🔹 Network ACLs (optional, extra compliance)
+# 🔹 Flow Logs → CloudWatch/S3
+# 🔹 Bastion Host / VPN / Direct Connect (secure access)
+# 🔹 VPC Peering / Transit Gateway (multi-VPC setups)
+# 🔹 IPv6 support (dual-stack networks)
+# 🔹 Strict tagging policy

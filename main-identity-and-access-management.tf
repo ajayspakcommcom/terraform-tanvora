@@ -47,14 +47,12 @@ module "custom_policy" {
   policy_file = "${path.module}/policies/list-s3.json"
 }
 
-
-
 # notes 
 # What’s Typically Added Later (if needed)
-# IAM Roles → for services (EC2, Lambda, ECS, App Runner)
-# Custom Policies (JSON) → least-privilege, compliance rules
-# MFA Enforcement → Security baseline
-# IAM Identity Center (SSO) → for enterprise user management (replaces IAM users for humans in many MNCs)
-# AWS Organizations + SCPs → Account-level guardrails
+  # IAM Roles → for services (EC2, Lambda, ECS, App Runner)
+  # Custom Policies (JSON) → least-privilege, compliance rules
+  # MFA Enforcement → Security baseline
+  # IAM Identity Center (SSO) → for enterprise user management (replaces IAM users for humans in many MNCs)
+  # AWS Organizations + SCPs → Account-level guardrails
 
 
